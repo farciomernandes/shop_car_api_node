@@ -32,6 +32,8 @@ class ImportCategoryUseCase {
                 });
             })
             .on("end", ()=>{
+                //Apaga arquivo após ler e salvar os dados!
+                fs.promises.unlink(file.path);
                 resolve(categories);
             }).on("error", (err)=>{
                 reject(err);
