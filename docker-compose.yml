@@ -7,7 +7,6 @@ services:
     restart: always
     ports: 
       - 5432:5432
-      - 9229:9229
     environment:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=node
